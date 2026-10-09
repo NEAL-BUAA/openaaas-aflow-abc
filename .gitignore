@@ -1,0 +1,11 @@
+**/config.toml
+**/data/
+**/data-query/
+**/data-stats/
+**/aflow-data/
+**/pi-agent-auth/
+**/.env
+**/__pycache__/
+**/*.pyc
+**/runtime-query/
+**/runtime-stats/

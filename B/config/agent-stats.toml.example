@@ -1,0 +1,24 @@
+[server]
+base_url = "https://YOUR-C-DOMAIN"
+poll_interval_secs = 5
+use_system_proxy = false
+
+[executor]
+executor_type = "standard"
+image = "abc-aflow-stats:latest"
+capacity = 2
+timeout_minutes = 30
+working_dir = "/workspace"
+
+[paths]
+data_dir = "./data-stats"
+
+[[paths.mounts]]
+host = "REPLACE_WITH_ABSOLUTE_B_PATH/aflow-data"
+container = "/aflow"
+readonly = true
+
+[[paths.mounts]]
+host = "REPLACE_WITH_ABSOLUTE_B_PATH/pi-agent-auth"
+container = "/home/worker/.pi/agent"
+readonly = true
